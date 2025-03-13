@@ -1,0 +1,52 @@
+.console-top {
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 9px;
+}
+
+.console-top > img {
+    width: 16px;
+    height: 16px;
+}
+
+.console-top p {
+    color: #000000;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 1px;
+}
+
+.console-top__controls {
+    display: flex;
+    margin-left: auto;
+}
+
+.console-top__controls button {
+    width: 32px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.console-top__controls button img {
+    width: 18px;
+    height: 18px;
+}
+
+
+.console-top__path-mobile {
+    display: none;
+}
+
+@media screen and (width < 390px) {
+    .console-top__path-pc {
+        display: none;
+    }
+
+    .console-top__path-mobile {
+        display: block;
+    }
+}

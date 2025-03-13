@@ -1,0 +1,44 @@
+.console {
+    width: min(800px, 100%);
+
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.console-inner {
+    background-color: var(--console-bg);
+    padding: 8px;
+}
+
+.console-text {
+    color: var(--console-text-color);
+    font-weight: 500;
+    font-size: var(--console-text-size);
+}
+
+.blink {
+    animation: blink 1s infinite;
+    margin-left: -3px;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    51% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.hidden-text {
+    color: #111111;
+}
+mark,
+.hidden-text::selection {
+    background-color: var(--console-text-color); /* Цвет фона выделенного текста */
+    color: #000000; /* Цвет текста */
+}
