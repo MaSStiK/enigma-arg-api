@@ -16,7 +16,7 @@ const REPLY = [
     {text: "Вглядись внимательнее — правда всеNгда на виду, но не все способны её увидеть."},
 
     {text: "&nbsp;"},
-    {text: "Ответом будет ", pause: 20}, {text: "<mark>сумма чисел</mark>", newLine: false, type: "code", pause: 20}, {text: ". Догадайся, откуда их нужно взять, и сложи их, чтобы получить ответ.", newLine: false},
+    {text: "Ответом будет ", pause: 20}, {text: "<mark>сумма чисел</mark>", newLine: false, type: "code", pause: 20}, {text: ", умноженная на количество чисел. Догадайся, где искать эти числа.", newLine: false},
     {text: "Запусти этот файл с параметром ответа, чтобы продолжить путь."},
     {text: "<mark>Пример:</mark>", type: "code", pause: 20}, {text: " key-1.bat 123", newLine: false},
 
@@ -53,6 +53,7 @@ const REPLY_ANSWER_INCORRECT = [
 // а - 1
 
 // 9+1+4+1+5+12+1 = 33
+// 33 * 7 = 231
 
 export async function GET(req) {
     const url = new URL(req.url);
@@ -63,7 +64,7 @@ export async function GET(req) {
     if (!answer) {
         reply = REPLY;
     } else {
-        reply = answer === "33" ? REPLY_ANSWER_CORRECT : REPLY_ANSWER_INCORRECT;
+        reply = answer === "231" ? REPLY_ANSWER_CORRECT : REPLY_ANSWER_INCORRECT;
     }
 
     return new Response(
