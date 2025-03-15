@@ -28,15 +28,18 @@ const REPLY = [
 
 const REPLY_ANSWER_CORRECT = [
     {text: `Reply from 77.85.11.60: `, speed: "instant"},
-    {text: `Ты разгадал число.`, newLine: false},
-    {text: `Reply from 77.85.11.60: `, speed: "instant"},
-    {text: `Следующее испытание в файле `, newLine: false, pause: 20}, {text: "<mark>key-2-hashed.bat</mark>", newLine: false, type: "code"},
+    {text: `Проверка ответа...`, newLine: false, pause: 2000},
+    {text: "&nbsp;"},
+    {text: `Поздравляю, тебе удалось разгадать число!`},
+    {text: `Следующее испытание в файле `, pause: 20}, {text: "<mark>key-2-hashed.bat</mark>", newLine: false, type: "code"},
     {text: "&nbsp;"},
 ];
 
 const REPLY_ANSWER_INCORRECT = [
     {text: `Reply from 77.85.11.60: `, speed: "instant"},
-    {text: `Не то число. Продолжай поиск.`, newLine: false},
+    {text: `Проверка ответа...`, newLine: false, pause: 2000},
+    {text: "&nbsp;"},
+    {text: `Не то число. Продолжай поиск.`},
     {text: "&nbsp;"},
 ];
 
