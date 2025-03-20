@@ -4,7 +4,7 @@ const REPLY = [
     {text: "Reply from 77.85.11.60: ", speed: "instant"},
         {text: "Внешний трафик зашифрован...", newLine: false},
     {text: "Reply from 77.85.11.60: ", speed: "instant"},
-        {text: "Источник: [REDACTED]...", newLine: false},
+        {text: "Источник: [Удалено]...", newLine: false},
 
     {text: "&nbsp;"},
     {text: "Ты уже сделал свой первый шаг, Искатель."},

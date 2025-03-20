@@ -17,10 +17,12 @@ const REPLY = [
     {text: "Ты один из них?"},
 
     {text: `<span class="hidden-text">Следующее задание</span>`, pause: 0, type: "code"},
-    {text: "В ", pause: 20},
-        {text: "<mark>этом</mark>", newLine: false, type: "code", pause: 20},
-            {text: " сообщении спрятано послание, читай между строк, чтобы найти его и приблизиться к награде.", newLine: false},
-    {text: "Но помни: награду получит только тот, кто первым пройдёт весь путь."},
+    {text: "В этом сообщении спрятано послание, читай ", pause: 20},
+        {text: "<mark>между строк</mark>", newLine: false, type: "code", pause: 20},
+            {text: ", чтобы найти его и приблизиться к награде.", newLine: false},
+    {text: "Но помни: награду получит только тот, кто "},
+        {text: "<mark>первым</mark>", newLine: false, type: "code", pause: 20},
+            {text: " пройдёт весь путь.", newLine: false},
     {text: "Только те, кто сумеют пройти все испытания, получат ценную информацию."},
 
     {text: `<span class="hidden-text">В файле</span>`, pause: 0, type: "code"},
