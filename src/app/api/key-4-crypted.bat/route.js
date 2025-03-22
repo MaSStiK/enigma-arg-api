@@ -23,7 +23,7 @@ const REPLY = [
     {text: "<mark>Пример:</mark>", type: "code", pause: 20},
         {text: " key-4-crypted.bat Ссылка.домен", newLine: false},
 
-    {text: `<img src="http://localhost:3000/encrypted.png" alt="encrypted">`, type: "code"},
+    {text: `<img src="https://enigma-arg-api.vercel.app/encrypted.png" alt="encrypted">`, type: "code"},
 
     {text: "&nbsp;"},
     {text: "2347"},
