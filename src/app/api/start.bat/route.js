@@ -33,6 +33,7 @@ const REPLY = [
     
     {text: `<span class="hidden-text">key-1.bat</span>`, pause: 0, type: "code"},
     {text: "Удачи!"},
+    {text: "2347"},
     {text: "&nbsp;"}
 ];
 
