@@ -44,6 +44,9 @@ const REPLY = [
     {text: "&nbsp;"},
 ];
 
+// X-56 1011000 101101 110101 110110 
+// Z637 1011010 110110 110011 110111
+
 export async function GET(req) {
     return new Response(
         JSON.stringify(REPLY),
