@@ -74,6 +74,8 @@ export async function GET(req) {
             : REPLY_ANSWER_INCORRECT;
     }
 
+    console.log("[GET] key-3-secured.bat, answer: " + answer)
+
     return new Response(
         JSON.stringify(reply),
         {

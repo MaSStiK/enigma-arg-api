@@ -86,6 +86,8 @@ export async function GET(req) {
             : REPLY_ANSWER_INCORRECT;
     }
 
+    console.log("[GET] key-2-hashed.bat, answer: " + answer)
+
     return new Response(
         JSON.stringify(reply),
         {

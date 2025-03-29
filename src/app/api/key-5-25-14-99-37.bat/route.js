@@ -48,6 +48,8 @@ const REPLY = [
 // Z637 1011010 110110 110011 110111
 
 export async function GET(req) {
+    console.log("[GET] key-5-25-14-99-37.bat")
+
     return new Response(
         JSON.stringify(REPLY),
         {

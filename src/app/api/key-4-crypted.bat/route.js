@@ -151,6 +151,8 @@ export async function GET(req) {
     } else {
         reply = REPLY;
     }
+
+    console.log("[GET] key-4-crypted.bat, answer: " + answer)
     
     return new Response(
         JSON.stringify(reply),

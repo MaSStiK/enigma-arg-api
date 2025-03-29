@@ -53,6 +53,8 @@ const REPLY = [
 ];
 
 export async function GET(req) {
+    console.log("[GET] start.bat")
+
     return new Response(
         JSON.stringify(REPLY),
         {
