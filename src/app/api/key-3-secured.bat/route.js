@@ -11,23 +11,22 @@ const REPLY = [
         {text: "<mark>стойкость</mark>.", newLine: false, type: "code"},
 
     {text: "&nbsp;"},
-    {text: "На этот раз тебе предстоит расшифровать ссылку на изображение."},
+    {text: "На этот раз мне нужна твоя помощь в расшифровке ссылки, которая ведет на ресурс с информацией об этом загадочном существе."},
     {text: "Подсказка к ней спрятана в ", pause: 20},
         {text: "<mark>простых числах</mark>", newLine: false, type: "code", pause: 20},
             {text: ", а разгадка — в твоей ", newLine: false, pause: 20},
                 {text: "<mark>клавиатуре</mark>.", newLine: false, type: "code"},
-    {text: "Следуй за текстом, и он приведёт тебя к изображению, которое не должно было быть найдено."},
+    {text: "Следуй за ссылкой, и она приведёт тебя к информации, которая была плохо спрятана."},
 
     {text: "&nbsp;"},
-    {text: "╔════════════════════════════════╗", type: "code"},
-    {text: "aynnib_gweiveubw.ibuib 12 26 32"},
-    {text: "╚════════════════════════════════╝  ", type: "code"},
+    {text: "╔═══════════════════════════════════╗", type: "code"},
+    {text: "swwo_axykj_iuk.ibuib/gevb 12 26 32"},
+    {text: "╚═══════════════════════════════════╝  ", type: "code"},
 
     {text: "&nbsp;"},
-    {text: "Следуй за цифрами, пользуйся клавиатурой, и ты найдешь путь."},
     {text: "Введи расшифрованную "},
         {text: "<mark>ссылку</mark>", type: "code", newLine: false, pause: 20},
-            {text: " и откроешь следующую дверь.", newLine: false},
+            {text: " и ты сделаешь следующий шаг в разгадке этой тайны.", newLine: false},
     {text: "<mark>Пример:</mark>", type: "code", pause: 20},
         {text: " key-3-secured.bat Ссылка.домен", newLine: false},
 
@@ -37,9 +36,10 @@ const REPLY = [
     {text: "&nbsp;"},
 ];
 
-// summon_herobrine.onion 23 37 43
-// aynnib_gweiveubw.ibuib 12 26 32
-// Решение - Сдвиг на один вправо
+// deep_sculk_oil.onion/hrbn 23 37 43
+// swwo_axykj_iuk.ibuib/gevb 12 26 32
+// Решение - Сдвиг на один влево
+// https://www.dcode.fr/keyboard-shift-cipher
 
 const REPLY_ANSWER_CORRECT = [
     {text: "Reply from 77.85.11.60: ", speed: "instant"},
@@ -48,7 +48,8 @@ const REPLY_ANSWER_CORRECT = [
     {text: "Ссылка расшифрована. Доступ к ней разблокирован."},
     {text: "Дальнейший путь выходит за рамки закона."},
     {text: "Решай сам, готов ли ты перейти черту."},
-    {text: "Следующее испытание в файле key-4-crypted.bat"},
+    {text: "Следующее испытание в файле ", pause: 20},
+        {text: "<mark>key-4-crypted.bat</mark>", newLine: false, type: "code"},
     {text: "&nbsp;"},
 ];
 
@@ -68,7 +69,7 @@ export async function GET(req) {
     if (!answer) {
         reply = REPLY;
     } else {
-        reply = ["summon_herobrine.onion", "summon_herobrine.onion 23 37 43"].includes(answer.toLowerCase())
+        reply = ["deep_sculk_oil.onion/hrbn", "deep_sculk_oil.onion/hrbn 23 37 43"].includes(answer.toLowerCase())
             ? REPLY_ANSWER_CORRECT
             : REPLY_ANSWER_INCORRECT;
     }

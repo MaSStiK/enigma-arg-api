@@ -13,17 +13,21 @@ const REPLY = [
     {text: "Обратной дороги теперь нет."},
 
     {text: "&nbsp;"},
-    {text: "Ты прошёл сквозь луковые сети и оказался по ту сторону обычного интернета."},
+    {text: "Самые глубокие тайны корпорации спрятаны в сети ", pause: 20},
+        {text: "<mark>Tor</mark>", newLine: false, type: "code", pause: 20},
+            {text: ".", newLine: false},
+    {text: "Я установил тебе нужные пакеты, чтобы ты мог к ним подключиться."},
+
+    {text: "&nbsp;"},
     {text: "Теперь ты в Даркнете, где тени хранят секреты, которые не должны были быть раскрыты."},
-    {text: "Перед тобой – след, ведущий к засекреченной правительственной тайне."},
+    {text: "Перед тобой – след, ведущий к засекреченной тайне корпорации."},
     {text: "Но помни: каждый разгаданный шифр приближает тебя к цели, и цена за это уже назначена."},
 
     {text: "&nbsp;"},
-    {text: "Следующий шаг спрятан там, где обычные глаза не могут видеть."},
     {text: "Используй уже имеющуюся у тебя ", pause: 20},
         {text: "<mark>ссылку</mark>", newLine: false, type: "code", pause: 20},
             {text: ", чтобы погрузиться в тёмные глубины даркнета.", newLine: false},
-    {text: "Твоя цель — найти файл, который откроет последний шаг на пути к разгадке."},
+    {text: "Твоя цель — найти файл, который даст ответ на загадку."},
 
     {text: "&nbsp;"},
     {text: "Используй команду ниже, чтобы открывать сайты из Даркнета, оставаясь анонимным и незамеченным."},
@@ -36,11 +40,13 @@ const REPLY = [
     {text: "&nbsp;"},
 ];
 
+// deep_sculk_oil.onion/hrbn*auth=directive-7
+// hrmv_ecyys_uul.saquz/hvov*ggtl=qqxqcxvdk-7
 // https://vk.com/club229819402
-// whusan_lrzunrmam.uzisa*iafh=hvzkotmim-7
-// summon_herobrine.onion*auth=directive-7
-// key-4-crypted.bat summon_herobrine.onion
-// key-4-crypted.bat summon_herobrine.onion*auth=directive-7
+// https://planetcalc.ru/2468/
+
+// key-4-crypted.bat deep_sculk_oil.onion/hrbn
+// key-4-crypted.bat deep_sculk_oil.onion/hrbn*auth=directive-7
 
 const REPLY_SUMMON_HEROBRINE = [
     {text: "[Socket-Connect] ", speed: "instant"},
@@ -48,7 +54,7 @@ const REPLY_SUMMON_HEROBRINE = [
     {text: "[Socket-Connect] ", speed: "instant"},
     {text: "Установление защищённого канала связи...", newLine: false, pause: 2000},
     {text: "&nbsp;"},
-    {text: 
+    {text:
         `<div class="tor-wrapper">
             <div class="tor-inner">
                 <h1>Извините!</h1>
@@ -101,8 +107,10 @@ const REPLY_SUMMON_HEROBRINE_AUTH = [
             <h2 class="warning">УРОВЕНЬ ДОСТУПА: МАКСИМАЛЬНЫЙ</h2>
 
             <h3>MCP-666 – "Херобрин"</h3>
-            <p>Объект представляет собой аномальное цифровое существо, способное проникать в виртуальные пространства и взаимодействовать с пользователями без их ведома.</p>
-            <p><strong>Класс объекта:</strong> <span>КЕТЕР</span></p>
+            <p>Объект представляет собой неизвестную аномалию, связанную с добычей скалк-нефти. Чаще всего его замечали в непосредственной близости от мест её выкачивания. Появление объекта сопровождается массовыми сбоями оборудования, исчезновением рабочих и аномальными слуховыми и зрительными феноменами.</p>
+            <p>Все попытки исследования объекта были прекращены после [ДАННЫЕ УДАЛЕНЫ].</p>
+            <br>
+            <p><strong>Поведение:</strong> <span>Враждебный при контакте</span></p>
             <p><strong>Сила:</strong> <span class="danger">НЕИЗВЕСТНО</span></p>
             <p><strong>Здоровье:</strong> <span class="danger">НЕИЗВЕСТНО</span></p>
             <p><strong>Месторасположение:</strong> <span class="danger">НЕИЗВЕСТНО</span></p>
@@ -111,7 +119,7 @@ const REPLY_SUMMON_HEROBRINE_AUTH = [
 
             <div class="image-container">
                 <img src="https://enigma-arg-api.vercel.app/encrypted/encrypted.png" alt="Объект">
-                <div class="coordinates">Координаты: X-96.8353, Z488.1930</div>
+                <div class="coordinates">Координаты: X-95.5130, Z488.4790</div>
             </div>
         </div>`,
         type: "code"},
@@ -133,8 +141,8 @@ export async function GET(req) {
 
     if (answer) {
         let answerLower = answer.toLowerCase();
-        if (answerLower.startsWith("summon_herobrine.onion")) {
-            reply = answerLower === "summon_herobrine.onion*auth=directive-7"
+        if (answerLower.startsWith("deep_sculk_oil.onion/hrbn")) {
+            reply = answerLower === "deep_sculk_oil.onion/hrbn*auth=directive-7"
                 ? REPLY_SUMMON_HEROBRINE_AUTH
                 : REPLY_SUMMON_HEROBRINE
         } else {
