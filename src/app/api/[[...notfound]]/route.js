@@ -5,6 +5,8 @@ const REPLY = [
 ]
 
 export async function GET(req) {
+    console.log("[GET] NotFound: " + req.url)
+
     return new Response(
         JSON.stringify(REPLY),
         {
