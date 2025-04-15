@@ -1,2 +1,2 @@
 # enigma-arg-api
-Сервер для ответов на загадки
+Серверная часть для [enigma-arg](https://github.com/MaSStiK/enigma-arg)
