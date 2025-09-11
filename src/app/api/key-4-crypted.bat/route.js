@@ -66,19 +66,19 @@ const REPLY_SUMMON_HEROBRINE = [
                 <ul>
                     <li>
                         <div class="tor__info-image">
-                            <img src="https://enigma-arg-api.onrender.com/tor/server_misconfigured.png">
+                            <img src="https://enigma-arg-api.vercel.app/tor/server_misconfigured.png">
                         </div>
                         <p class="tor__heading-text">У вас недостаточный уровень допуска.</p>
                     </li>
                     <li>
                         <div class="tor__info-image">
-                            <img src="https://enigma-arg-api.onrender.com/tor/IP_changed.png">
+                            <img src="https://enigma-arg-api.vercel.app/tor/IP_changed.png">
                         </div>
                         <p class="tor__heading-text">IP - адрес был изменён.</p>
                     </li>
                     <li>
                         <div class="tor__info-image">
-                            <img src="https://enigma-arg-api.onrender.com/tor/server_moved.png">
+                            <img src="https://enigma-arg-api.vercel.app/tor/server_moved.png">
                         </div>
                         <p class="tor__heading-text">Сайт мог быть перенесён на другой сервер.</p>
                     </li>
@@ -86,7 +86,7 @@ const REPLY_SUMMON_HEROBRINE = [
             </section>
 
             <div class="tor__cpanel">
-                <img src="https://enigma-arg-api.onrender.com/tor/powered_by_cpanel.svg" alt="powered_by_cpanel">
+                <img src="https://enigma-arg-api.vercel.app/tor/powered_by_cpanel.svg" alt="powered_by_cpanel">
                 <p>Copyright © 2025 cPanel, L.L.C.</p>
             </div>
         </div>`,
@@ -118,7 +118,7 @@ const REPLY_SUMMON_HEROBRINE_AUTH = [
             <h2 class="glitch">⚠ ТРЕБУЕТСЯ РАСКРЫТЬ СКРЫТОЕ ПОСЛАНИЕ ⚠</h2>
 
             <div class="image-container">
-                <img src="https://enigma-arg-api.onrender.com/encrypted/encrypted.png" alt="Объект">
+                <img src="https://enigma-arg-api.vercel.app/encrypted/encrypted.png" alt="Объект">
                 <div class="coordinates">Координаты: X-95.5130, Z488.4790</div>
             </div>
         </div>`,
